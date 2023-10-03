@@ -1,0 +1,36 @@
+.item {
+  width: 320px;
+  height: 300px;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(36, 37, 41);
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 30px;
+  margin-right: 50px;
+}
+
+.details {
+  padding: 10px 20px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.genre {
+  display: flex;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.buy {
+  position: absolute;
+  right: 0;
+  bottom: -12px;
+}
