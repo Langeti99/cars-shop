@@ -1,5 +1,18 @@
-.home {
+/* .home {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+} */
+
+.home {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 1fr;
+  grid-gap: 10px;
+}
+
+.home > div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }

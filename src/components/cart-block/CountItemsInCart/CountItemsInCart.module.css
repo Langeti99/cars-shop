@@ -1,0 +1,19 @@
+.count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 19px;
+  top: -5px;
+  width: 19px;
+  height: 19px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.count span {
+  font-size: 14px;
+  line-height: 14px;
+  padding: 0;
+  margin: 0;
+}

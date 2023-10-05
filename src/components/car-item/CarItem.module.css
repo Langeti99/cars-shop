@@ -1,6 +1,7 @@
 .item {
   width: 320px;
-  height: 300px;
+  /* height: 300px; */
+  /* flex: 1; */
   text-decoration: none;
   color: white;
   background-color: rgb(36, 37, 41);
@@ -32,5 +33,5 @@
 .buy {
   position: absolute;
   right: 0;
-  bottom: -12px;
+  bottom: -14px;
 }

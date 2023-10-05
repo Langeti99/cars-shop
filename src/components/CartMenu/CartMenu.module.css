@@ -1,0 +1,28 @@
+.cart {
+  position: absolute;
+  top: 40px;
+  left: -300px;
+  background-color: rgb(36, 37, 41);
+  width: 400px;
+  padding: 13px 20px;
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+}
+
+.arrange {
+  margin-top: 20px;
+  border-top: 1px solid white;
+  padding: 20px 0;
+}
+
+.total {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total span {
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,16 @@
+.item {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  width: 100%;
+  border-bottom: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 2px;
+}
+
+.delete:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
