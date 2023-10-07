@@ -7,7 +7,9 @@ export const Header = () => {
   return (
     <div className={styles.header}>
       <div className={styles.wrapper}>
-        <Link className={styles.title}>Car Store</Link>
+        <Link to="/" className={styles.title}>
+          Car Store
+        </Link>
       </div>
       <div className={`${styles.cartBtn} ${styles.wrapper}`}>
         <CartBlock />

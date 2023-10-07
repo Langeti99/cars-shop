@@ -9,3 +9,5 @@ export const CarCover = ({ image = "" }) => {
     />
   );
 };
+
+export default CarCover;

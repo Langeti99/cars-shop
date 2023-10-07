@@ -1,0 +1,30 @@
+.item {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.cover {
+  width: 200px;
+  margin-right: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.price {
+  display: flex;
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+.delete {
+  margin-left: 10px;
+  padding-top: 4px;
+}
+
+.icon {
+  cursor: pointer;
+}

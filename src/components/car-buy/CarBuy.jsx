@@ -11,6 +11,7 @@ export const CarBuy = ({ car }) => {
 
   const handleClick = (e) => {
     if (isItemInCart) {
+      e.stopPropagation();
       dispatch(deleteItemFromCart(car.id));
     } else {
       e.stopPropagation();
@@ -20,7 +21,7 @@ export const CarBuy = ({ car }) => {
 
   return (
     <div className={style.buy}>
-      <span className={style.price}>{car.price} USD.</span>
+      <span className={style.price}>{car.price} USD</span>
       <Button
         type={isItemInCart ? "secondary" : "primary"}
         onClick={handleClick}
