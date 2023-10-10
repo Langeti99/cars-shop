@@ -17,11 +17,13 @@ export const CartMenu = ({ cars, onClick }) => {
       <div className={style.arrange}>
         <div className={style.total}>
           <span>Сумма: </span>
-          <span>{calcTotalPrice(cars)} USD</span>
+          <span>{calcTotalPrice(cars)}</span>
         </div>
-        <Button type="primary" size="m" onClick={onClick}>
-          Оформити замовлення
-        </Button>
+        {cars.length > 0 && (
+          <Button type="primary" size="m" onClick={onClick}>
+            Оформити замовлення
+          </Button>
+        )}
       </div>
     </div>
   );

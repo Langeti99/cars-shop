@@ -1,17 +1,26 @@
 .btn {
   border-radius: 15px;
+  padding: 10px 20px;
   color: white;
   border: none;
-  padding: 5px;
   cursor: pointer;
+  transition: background-color ease-in-out 0.1s;
 }
 
 .btn--primary {
   background-color: rgb(85, 88, 237);
 }
 
+.btn--primary:hover {
+  background-color: #2c09c9;
+}
+
 .btn--secondary {
   background-color: rgb(80, 82, 84);
+}
+
+.btn--secondary:hover {
+  background-color: rgb(12, 14, 14);
 }
 
 .btn--small {

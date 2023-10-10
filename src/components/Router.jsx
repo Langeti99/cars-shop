@@ -1,6 +1,7 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "../redux";
+import { Payment } from "./screens/Payment/Payment";
 
 import { Home } from "./screens/Home";
 import { Header } from "./header";
@@ -18,6 +19,7 @@ const Router = () => {
             <Route element={<Game />} path="/app/:name" />
             <Route element={<Order />} path="/order" />
             <Route element={<p>Page is not defined</p>} path="*" />
+            <Route element={<Payment />} path="/payment" />
           </Routes>
         </div>
       </BrowserRouter>

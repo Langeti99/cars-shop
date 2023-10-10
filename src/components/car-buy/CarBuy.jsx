@@ -3,6 +3,7 @@ import style from "./car-buy.module.css";
 import { Button } from "../button/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { addItemToCart, deleteItemFromCart } from "../../redux/cart/cart";
+import { changeToCurrency } from "../../utils/changeToCurrency";
 
 export const CarBuy = ({ car }) => {
   const dispatch = useDispatch();
@@ -21,13 +22,13 @@ export const CarBuy = ({ car }) => {
 
   return (
     <div className={style.buy}>
-      <span className={style.price}>{car.price} USD</span>
       <Button
         type={isItemInCart ? "secondary" : "primary"}
         onClick={handleClick}
       >
         {isItemInCart ? "Видалити з корзини" : "В корзину"}
       </Button>
+      <div className={style.price}>{changeToCurrency(car.price, "PLN")}</div>
     </div>
   );
 };

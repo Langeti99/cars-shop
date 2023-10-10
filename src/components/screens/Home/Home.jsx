@@ -4,9 +4,9 @@ import { CarItem } from "./../../car-item";
 const CARS = [
   {
     id: 1,
-    name: "Bugatti",
+    name: "Кружка з іменем",
     image: "/cars/1.jpg",
-    price: 122000,
+    price: 20,
     video: "https://www.youtube.com/embed/yM0azrA_uWE?si=aJbpZezuUxfPV00L",
     genres: ["Спортивні автомобілі", "Лімузини класу люкс", "Гіперкари"],
     description:
@@ -14,9 +14,9 @@ const CARS = [
   },
   {
     id: 2,
-    name: "Lamborghini",
+    name: "Кружка з надписом",
     image: "/cars/2.jpg",
-    price: 150000,
+    price: 20,
     video: "https://www.youtube.com/embed/qZdjdfochkI?si=JN5VRJQhtLXMXtoW",
     genres: ["Суперкари", "Ексклюзивні автомобілі", "Екзотичні автомобілі"],
     description:
@@ -24,9 +24,9 @@ const CARS = [
   },
   {
     id: 3,
-    name: "Mclaren",
+    name: "Кружка 'Барбершоп'",
     image: "/cars/3.jpg",
-    price: 122000,
+    price: 20,
     video: "https://www.youtube.com/embed/t9-cMiEDNyk?si=l2Dg__vfgnzo3Gz0",
     genres: [
       "Спортивні автомобілі",
@@ -41,8 +41,8 @@ const CARS = [
 export const Home = () => {
   return (
     <div className={styles.home}>
-      {CARS.map((car) => (
-        <CarItem car={car} key={car.id} />
+      {CARS.map((car, i) => (
+        <CarItem i={i} car={car} key={car.id} />
       ))}
     </div>
   );

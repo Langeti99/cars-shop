@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+
 import { BiCartAlt } from "react-icons/bi";
 import styles from "./CartBlock.module.css";
 import { useSelector } from "react-redux";
@@ -13,6 +15,17 @@ export const CartBlock = () => {
   const totalPrice = calcTotalPrice(items);
   const history = useNavigate();
 
+  const valueVariant = {
+    visible: {
+      opacity: 1,
+      x: 0,
+    },
+    hidden: {
+      opacity: 0,
+      x: 100,
+    },
+  };
+
   const handleOpen = () => {
     setIsCartOpen((prev) => !prev);
   };
@@ -26,7 +39,11 @@ export const CartBlock = () => {
     <div className={styles.cart}>
       <CountItemsInCart count={items.length} />
       <BiCartAlt onClick={handleOpen} size={30} className={styles.icon} />
-      {items.length > 0 ? <span>{totalPrice} USD</span> : null}
+      {items.length > 0 ? (
+        <motion.span variants={valueVariant} initial="hidden" animate="visible">
+          {totalPrice}
+        </motion.span>
+      ) : null}
       {isCartOpen ? <CartMenu cars={items} onClick={handleOrder} /> : null}
     </div>
   );
